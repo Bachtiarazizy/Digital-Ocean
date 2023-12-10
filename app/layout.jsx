@@ -1,8 +1,6 @@
 import React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,12 +9,10 @@ export const metadata = {
   description: "Discovering the best web development",
 };
 
-const RootLayout = ({ children, hasHeader }) => {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      {hasHeader ? null : <Navbar />}
       <main className={inter.className}>{children}</main>
-      <Footer />
     </html>
   );
 };
